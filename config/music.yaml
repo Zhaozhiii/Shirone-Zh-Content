@@ -1,6 +1,2 @@
 enable: true
-provider: meting
-meting:
-  server: netease
-  type: playlist
-  id: '18515546272'
+provider: local
