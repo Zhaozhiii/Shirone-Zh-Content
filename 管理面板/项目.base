@@ -1,0 +1,78 @@
+filters:
+  and:
+    - file.inFolder("cms/projects")
+    - file.ext == "md"
+properties:
+  key:
+    displayName: 稳定标识
+  title:
+    displayName: 标题
+  summary:
+    displayName: 简介
+  category:
+    displayName: 分类标识
+  phase:
+    displayName: 阶段
+  technologies:
+    displayName: 技术
+  icon:
+    displayName: 图标
+  cover:
+    displayName: 封面
+  coverAlt:
+    displayName: 图片说明
+  featured:
+    displayName: 推荐
+  website:
+    displayName: 项目网址
+  repository:
+    displayName: 仓库
+  year:
+    displayName: 年份
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - key
+      - title
+      - summary
+      - category
+      - phase
+      - technologies
+      - icon
+      - cover
+      - coverAlt
+      - featured
+      - website
+      - repository
+      - year
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

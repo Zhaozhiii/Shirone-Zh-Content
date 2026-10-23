@@ -1,0 +1,57 @@
+filters:
+  and:
+    - file.inFolder("cms/compass")
+    - file.ext == "md"
+properties:
+  key:
+    displayName: 稳定标识
+  name:
+    displayName: 分组名称
+  icon:
+    displayName: 图标
+  blurb:
+    displayName: 说明
+  entries:
+    displayName: 网址条目
+  title:
+    displayName: 标题
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - key
+      - name
+      - icon
+      - blurb
+      - entries
+      - title
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

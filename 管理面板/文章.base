@@ -1,0 +1,90 @@
+filters:
+  and:
+    - file.inFolder("content/posts")
+    - file.ext == "md"
+properties:
+  title:
+    displayName: 标题
+  published:
+    displayName: 发布日期
+  publishedAt:
+    displayName: 精确发布时间
+  description:
+    displayName: 摘要
+  image:
+    displayName: 封面
+  category:
+    displayName: 分类
+  tags:
+    displayName: 标签
+  series:
+    displayName: 系列
+  seriesOrder:
+    displayName: 系列内顺序
+  pinned:
+    displayName: 置顶
+  comment:
+    displayName: 允许评论
+  encrypted:
+    displayName: 密码保护
+  passwordHint:
+    displayName: 密码提示
+  hideHomeContent:
+    displayName: 隐藏首页正文
+  permalink:
+    displayName: 固定网址
+  alias:
+    displayName: 网址别名
+  lang:
+    displayName: 语言
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - title
+      - published
+      - publishedAt
+      - description
+      - image
+      - category
+      - tags
+      - series
+      - seriesOrder
+      - pinned
+      - comment
+      - encrypted
+      - passwordHint
+      - hideHomeContent
+      - permalink
+      - alias
+      - lang
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

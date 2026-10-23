@@ -1,0 +1,69 @@
+filters:
+  and:
+    - file.inFolder("cms/media")
+    - file.ext == "md"
+properties:
+  key:
+    displayName: 稳定标识
+  title:
+    displayName: 标题
+  kind:
+    displayName: 类型
+  creator:
+    displayName: 作者 / 导演
+  status:
+    displayName: 观看 / 阅读进度
+  rating:
+    displayName: 评分（0–10）
+  date:
+    displayName: 完成日期
+  cover:
+    displayName: 封面
+  description:
+    displayName: 简评
+  url:
+    displayName: 外链
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - key
+      - title
+      - kind
+      - creator
+      - status
+      - rating
+      - date
+      - cover
+      - description
+      - url
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

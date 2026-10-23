@@ -1,0 +1,9 @@
+{
+  "id": "shirone-cms",
+  "name": "Shirone CMS",
+  "version": "1.0.0",
+  "minAppVersion": "1.12.7",
+  "description": "在 Obsidian 中可视化管理 Shirone 博客、预览、同步与发布。",
+  "author": "Zhaozhiii",
+  "isDesktopOnly": true
+}

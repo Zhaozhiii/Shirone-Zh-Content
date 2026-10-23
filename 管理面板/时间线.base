@@ -1,0 +1,72 @@
+filters:
+  and:
+    - file.inFolder("cms/timeline")
+    - file.ext == "md"
+properties:
+  title:
+    displayName: 标题
+  date:
+    displayName: 日期
+  description:
+    displayName: 说明
+  category:
+    displayName: 分类
+  icon:
+    displayName: 图标
+  tags:
+    displayName: 标签
+  subtitle:
+    displayName: 机构 / 职位
+  location:
+    displayName: 地点
+  highlights:
+    displayName: 要点
+  links:
+    displayName: 相关链接
+  featured:
+    displayName: 重点
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - title
+      - date
+      - description
+      - category
+      - icon
+      - tags
+      - subtitle
+      - location
+      - highlights
+      - links
+      - featured
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

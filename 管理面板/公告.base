@@ -1,0 +1,54 @@
+filters:
+  and:
+    - file.inFolder("cms/announcements")
+    - file.ext == "md"
+properties:
+  title:
+    displayName: 标题
+  content:
+    displayName: 正文
+  tag:
+    displayName: 标签
+  date:
+    displayName: 日期
+  link:
+    displayName: 详情链接
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - title
+      - content
+      - tag
+      - date
+      - link
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

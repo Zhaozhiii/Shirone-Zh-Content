@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "managed": [
+    "categories",
+    "tags",
+    "series",
+    "media",
+    "compass",
+    "devices",
+    "projects",
+    "friends",
+    "skills",
+    "timeline",
+    "anime",
+    "aboutTechGroups",
+    "aboutMilestones",
+    "aboutSocialLinks",
+    "announcements",
+    "albums"
+  ],
+  "migratedAt": "2026-10-23T17:16:47.143Z",
+  "counts": {
+    "compass": 0,
+    "devices": 8,
+    "projects": 3,
+    "friends": 3,
+    "skills": 21,
+    "timeline": 5,
+    "anime": 0,
+    "aboutTechGroups": 0,
+    "aboutMilestones": 0,
+    "aboutSocialLinks": 0
+  }
+}

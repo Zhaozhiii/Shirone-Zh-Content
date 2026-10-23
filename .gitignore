@@ -6,3 +6,9 @@ node_modules/
 Thumbs.db
 __pycache__/
 *.pyc
+.trash/
+.obsidian/workspace*.json
+.obsidian/cache/
+.obsidian/plugins/shirone-cms/data.json
+.obsidian/plugins/shirone-cms/*.log
+.obsidian/plugins/shirone-cms/.pending*

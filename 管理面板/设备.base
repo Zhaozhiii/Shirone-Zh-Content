@@ -1,0 +1,81 @@
+filters:
+  and:
+    - file.inFolder("cms/devices")
+    - file.ext == "md"
+properties:
+  id:
+    displayName: 稳定标识
+  name:
+    displayName: 名称
+  brand:
+    displayName: 品牌
+  category:
+    displayName: 分类标识
+  status:
+    displayName: 状态
+  specs:
+    displayName: 规格
+  description:
+    displayName: 介绍
+  specDetails:
+    displayName: 详细规格
+  image:
+    displayName: 图片
+  icon:
+    displayName: 图标
+  link:
+    displayName: 网址
+  featured:
+    displayName: 推荐
+  year:
+    displayName: 年份
+  title:
+    displayName: 标题
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - id
+      - name
+      - brand
+      - category
+      - status
+      - specs
+      - description
+      - specDetails
+      - image
+      - icon
+      - link
+      - featured
+      - year
+      - title
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

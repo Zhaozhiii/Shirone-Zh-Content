@@ -1,0 +1,75 @@
+filters:
+  and:
+    - file.inFolder("cms/anime")
+    - file.ext == "md"
+properties:
+  title:
+    displayName: 标题
+  cover:
+    displayName: 封面
+  link:
+    displayName: 网址
+  status:
+    displayName: 状态
+  rating:
+    displayName: 评分
+  year:
+    displayName: 年份
+  genres:
+    displayName: 题材
+  description:
+    displayName: 感想
+  studio:
+    displayName: 制作公司
+  progress:
+    displayName: 观看进度
+  period:
+    displayName: 观看期间
+  identity:
+    displayName: 来源身份
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - title
+      - cover
+      - link
+      - status
+      - rating
+      - year
+      - genres
+      - description
+      - studio
+      - progress
+      - period
+      - identity
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220

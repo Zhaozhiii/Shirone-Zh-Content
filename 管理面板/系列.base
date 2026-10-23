@@ -1,0 +1,51 @@
+filters:
+  and:
+    - file.inFolder("cms/series")
+    - file.ext == "md"
+properties:
+  key:
+    displayName: 稳定网址标识
+  title:
+    displayName: 标题
+  description:
+    displayName: 简介
+  cover:
+    displayName: 封面
+  draft:
+    displayName: 草稿
+  visible:
+    displayName: 显示
+  order:
+    displayName: 排序（小值优先）
+  publishAt:
+    displayName: 定时发布
+  unpublishAt:
+    displayName: 定时下线
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - key
+      - title
+      - description
+      - cover
+      - draft
+      - visible
+      - order
+      - publishAt
+      - unpublishAt
+    sort:
+      - property: order
+        direction: ASC
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - title
+      - name
+      - draft
+      - visible
+      - publishAt
+    image: note.cover
+    cardSize: 220
