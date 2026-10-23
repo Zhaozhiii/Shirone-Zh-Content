@@ -14,6 +14,9 @@ pages:
   guestbook: false
   anime: false
 banner:
+  dim:
+    enable: true
+    opacity: 0.42
   src:
     desktop:
       - assets/images/banner/shinjuku.png
@@ -28,7 +31,8 @@ banner:
       pauseTime: 10000
       loop: true
     links:
-      - ariaLabel: BiliBili
+      - text: Bilibili
+        ariaLabel: Bilibili
         icon: fa6-brands:bilibili
         url: https://space.bilibili.com/109369918
       - ariaLabel: GitHub
