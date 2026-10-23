@@ -22,7 +22,9 @@
 本仓保存由当前博客迁出的内容，原始模板另备份于本机 `D:/Projects/Blog/.tools/content-template-backup-20261023/`，Git 历史也保留原模板。
 
 首次发布请先提交并推送本内容仓，再提交并推送主题仓。主题仓 CI 会读取本仓 `main`。
-跨仓自动触发暂未启用，`.github/workflows/trigger-build.yml.example` 仅为模板；仅推送本仓不会自动部署。服务器发布版本目前使用主题提交 SHA，启用独立内容部署前需完善内容版本关联。
+跨仓自动发布已启用：向 `main` 推送文章、动态、配置、数据或图片后，`.github/workflows/trigger-build.yml` 会通知主题仓锁定本次内容提交、检查、构建并发布。仅修改 README 或 docs 不触发构建。加密触发凭据保存在本仓 Actions Secret `DISPATCH_TOKEN` 中，不要把令牌写入文件。
+
+在主题仓 <https://github.com/Zhaozhiii/shirone-Zh/actions> 查看部署结果；线上 `/healthz` 返回主题提交 `code`、内容提交 `content` 和共同的发布标识 `release`。连续推送时，过时版本会跳过发布。
 
 ## 本地预览
 
