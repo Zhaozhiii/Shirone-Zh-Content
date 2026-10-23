@@ -34,6 +34,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Notify code repository
+        timeout-minutes: 2
         uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4.0.1
         with:
           token: ${{ secrets.DISPATCH_TOKEN }}
