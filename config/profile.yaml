@@ -1,15 +1,22 @@
-# profile.yaml —— 覆盖主题的 src/config/profileConfig.ts
-# 只写想改的键，其余保持主题默认值（主题升级后新默认值会自动生效）。
-avatar: assets/images/demo-avatar.webp
-name: Zhaozhiii
-bio: The rain remembers what the sky forgot to say.
+avatar: assets/images/profile/avatar.jpg
+name: 赵跖
+bio: 你知道我们在谈论什么。
 links:
-  - name: Twitter
-    icon: fa6-brands:twitter
-    url: https://twitter.com
-  - name: Steam
-    icon: fa6-brands:steam
-    url: https://store.steampowered.com
-  - name: GitHub
-    icon: fa6-brands:github
-    url: https://github.com/Zhaozhiii
+  - name: QQ · 3217413908
+    icon: fa6-brands:qq
+    url: https://wpa.qq.com/msgrd?v=3&uin=3217413908&site=qq&menu=yes
+  - name: BiliBili
+    icon: fa6-brands:bilibili
+    url: https://space.bilibili.com/109369918
+  - name: 知乎
+    icon: fa6-brands:zhihu
+    url: https://www.zhihu.com/people/bi-li-hai-ling-dun-93
+  - name: 网易云
+    icon: simple-icons:neteasecloudmusic
+    url: https://music.163.com/#/user/home?id=1288451808
+  - name: Email
+    icon: material-symbols:mail-outline-rounded
+    url: mailto:a2673601643@163.com
+  - name: RSS 订阅
+    icon: material-symbols:rss-feed-rounded
+    url: /rss.xml

@@ -1,0 +1,12 @@
+enable: true
+showComment: false
+methods:
+  - enable: true
+    name: 微信
+    icon: fa6-brands:weixin
+    qrcode: /images/sponsor/wechat.jpg
+  - enable: true
+    name: 支付宝
+    icon: fa6-brands:alipay
+    qrcode: /images/sponsor/alipay.jpg
+sponsors: []
